@@ -17,4 +17,26 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  background-image:var(--bg-image), var(--bg-linar-gradient);  
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow:auto;
+  justify-content: end;
+  align-items: center;
+  gap: 25px;
+  font-family: var(--accent-font, sans-serif);
+  font-weight: normal;
+  border: 2px solid var(--main-color);
+}
+
+.theme-menu__button {
+  background-color: inherit;
+  border: none;
 }
