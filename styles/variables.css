@@ -4,9 +4,18 @@
   --accent-font: 'Press Start 2P';
   --normal-font-weight: 465;
   --bold-font-weight: 785;
+  --title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --width-block: clamp(375px, 100vw, 700px);
+  --width-image: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);  /*clamp(371px, 100vw, 696px);*/
   --main-color:#00CC14;
+  --heart-contur-color:#00CC14;
+  --heart-sparks-color: red;
+  --heart-body-color: #00CC14;
+  --heart-core-color: #FFFFFF;
   --bg-color: #000000;
   --bg-gradient-color: #000000;
+  --shadow-color: #000000;
+  --border: 2px solid var(--main-color);
   --bg-image:repeating-linear-gradient(90deg, transparent 2px, var(--bg-gradient-color) 2px, var(--bg-gradient-color) 4px, transparent 4px, transparent 6px),
   repeating-linear-gradient(transparent 2px, var(--bg-gradient-color) 2px, var(--bg-gradient-color) 4px, transparent 4px, transparent 6px);
   --bg-linar-gradient: linear-gradient(#007f0c, #004306);
