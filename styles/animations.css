@@ -12,6 +12,16 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes opacity-motion {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
 @keyframes arrow-motion {
   from {
     left: -15px;
@@ -19,6 +29,62 @@
   to {
     left: -11px;
   }
+}
+
+@keyframes scale-motion {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes sparks-motion {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.theme-menu__button:disabled {
+  animation: opacity-motion 0.3s ease forwards;
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
+  animation: opacity-motion 0.3s ease forwards;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  left: -15px;
+  animation: arrow-motion 0.5s ease-in-out alternate-reverse infinite;
+  position: absolute;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  animation: opacity-motion 0.3s ease forwards;
+}
+
+.theme-menu__button::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: 2px;
+  background-color: var(--main-color);
+  transition: width 0.3s;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+  transform: scaleX(0.9);
+  transform-origin: left;
 }
 
 .sparks {
@@ -75,29 +141,15 @@
   transition-delay: 0.06s;
 }
 
+.contour {
+  fill: var(--heart-contur-color);
+  transition: fill 0.1s linear;
+}
+
 .like-icon.is-liked .heart {
   animation: scale-motion 0.3s 0.1s ease-in 1 reverse;
 }
 
 .like-icon.is-liked .sparks {
   animation: sparks-motion 0.3s 0.3s ease-in 1 reverse;
-}
-
-
-@keyframes scale-motion {
-  from {
-    scale: 1;
-  }
-  to {
-    scale: 1.5;
-  }
-}
-
-@keyframes sparks-motion {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }

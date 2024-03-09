@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/animations.css">
     <link rel="stylesheet" href="./styles/themes.css">
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href=".images/favicon.png">
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
@@ -80,7 +82,11 @@
       </section>          
     </main>
     <footer class="footer content__size">
-      <button type="button" class="button footer__button decorated-button">
+      <button type="button" 
+        onclick="window['dialog-id'].showModal();"
+        aria-controls="dialog-id"
+        class="button footer__button decorated-button" 
+      >
         <svg class="footer__button-icon" viewBox="0 0 21 21">
           <use href="./svg/floppy.svg#floppy"/>
         </svg>
@@ -88,5 +94,20 @@
       </button>
     </footer>
     <script src="./scripts/like.js"></script>
+    <dialog id="dialog-id" class="dialog">
+      <div class="dialog_title">
+        <svg class="dialog__title-icon" viewBox="0 0 21 21">
+          <use href="./svg/floppy.svg#floppy"/>
+        </svg>
+        <h2 class="dialog_title-text">Вставьте дискету, чтобы продолжить</h2>
+      </div> 
+      <button type="submit"
+        onclick="window['dialog-id'].close();" 
+        class="button decorated-button dialog_button"
+      >
+        <span class="button__text">ок</span>
+      </button>
+        
+  </dialog> 
   </body>
 </html>
