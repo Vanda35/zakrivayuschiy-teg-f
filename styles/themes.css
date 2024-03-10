@@ -12,6 +12,7 @@
   --bg-linar-gradient: linear-gradient(#007f0c, #004306);
   --heart-contur-color:#00CC14;
   --heart-body-color: #00CC14;
+  --shadow-color: #000000;
 }
 
 :root.theme-light {
@@ -22,6 +23,7 @@
   --bg-linar-gradient: linear-gradient(#e7e7e7 0.01%, #1a1a1a);
   --heart-contur-color:#000000;
   --heart-body-color: #000000;
+  --shadow-color: #FFFFFF;
 }
 
 @media (prefers-color-scheme: light) {
@@ -32,5 +34,6 @@
     --bg-gradient-color: #d3d3d3;
     --bg-linar-gradient: linear-gradient(#e7e7e7 0.01%, #1a1a1a);
     --heart-body-color: #000000;
+    --shadow-color: #FFFFFF;
   }
 }
