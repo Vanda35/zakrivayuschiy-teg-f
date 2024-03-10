@@ -141,7 +141,10 @@
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px var(--shadow-color)) or (-webkit-text-stroke: 1px var(--shadow-color))) {
+@supports (
+  (text-stroke: 1px var(--shadow-color)) or
+    (-webkit-text-stroke: 1px var(--shadow-color))
+) {
   .card__image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--shadow-color);
@@ -266,7 +269,7 @@
 }
 
 .filter-complicated {
-  filter: contrast(150%) brightness(110%) hue-rotate(30deg);
+  filter: contrast(150%) brightness(110%) hue-rotate(-10deg);
 }
 
 .footer {
