@@ -5,8 +5,7 @@
   --normal-font-weight: 465;
   --bold-font-weight: 785;
   --title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  --width-block: clamp(375px, 100vw, 700px);
-  --width-image: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);  /*clamp(371px, 100vw, 696px);*/
+  --width-block: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --main-color:#00CC14;
   --text-color:#00CC14;
   --heart-contur-color:#00CC14;
