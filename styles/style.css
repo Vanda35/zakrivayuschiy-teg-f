@@ -303,12 +303,12 @@
   background-color: var(--bg-color);
 }
 
-dialog[open] {
+.dialog[open] .dialog__form {
   display: grid;
   gap: 30px;
 }
 
-dialog:not([open]) {
+.dialog:not([open]) {
   opacity: 0;
   pointer-events: none;
 }
