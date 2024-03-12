@@ -17,8 +17,8 @@
 .page {
   box-sizing: border-box;
   color: var(--main-color);
-  font-family: Inter, sans-serif;
-  font-weight: 400;
+  font-family: var(--main-font, sans-serif);
+  font-variation-settings: "wght" var(--normal-font-weight);
   font-size: 18px;
   background-color: var(--bg-color);
   background-image: var(--bg-image), var(--bg-linar-gradient);
@@ -26,13 +26,6 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-}
-
-@supports (font-variation-settings: normal) {
-  .page {
-    font-family: var(--main-font, sans-serif);
-    font-variation-settings: "wght" var(--normal-font-weight);
-  }
 }
 
 .content__size {
@@ -140,15 +133,9 @@
 
 .article__title {
   padding: 6px 10px 2px 10px;
-  font-weight: 800;
+  font-variation-settings: "wght" var(--bold-font-weight);
   font-size: 18px;
   line-height: 21.78px;
-}
-
-@supports (font-variation-settings: normal) {
-  .article__title {
-    font-variation-settings: "wght" var(--bold-font-weight);
-  }
 }
 
 .card__text {
